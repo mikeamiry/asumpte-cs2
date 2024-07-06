@@ -480,7 +480,7 @@ int main() {
 
             Vector3 screenPos = origin.WTS(view_matrix);
             Vector3 screenHead = head.WTS(view_matrix);
-
+            
             float height = screenPos.y - screenHead.y;
             float width = height / 2.4f;
 
@@ -499,7 +499,7 @@ int main() {
 
 				Vector3 angelsScreen = newAngelsVec3.WTS(view_matrix);
 
-                float distance = sqrt(pow(screenHead.x - screenWidth / 2, 2) + pow(screenHead.y - screenHeight / 2, 2));
+                float distance = sqrt(pow(screenHead.x - screenWidth / static_cast<float>(2), 2) + pow(screenHead.y - screenHeight / static_cast<float>(2), 2));
                 if (distance <= settings::aimbotFovSize / 180.f * screenWidth) {
 
                     //if (settings::aimbotMemory) {
